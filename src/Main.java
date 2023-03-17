@@ -4,6 +4,8 @@ public class Main {
         Komplex a = new Komplex(3.0,2.0);
         Komplex b = new Komplex(4.0,1.0);
 
+
+
         System.out.println("talet borde vara 3 + 2i:\n" + a);
 
         Komplex c = a.add(b);
@@ -24,7 +26,7 @@ public class Main {
 
         System.out.println("Argumentet till 3+2i är " + a.arg());
         if (a.arg() == Math.atan(2.0/3)) {
-            System.out.println("arg() funkar!!");
+           System.out.println("arg() funkar!!");
         }
     }
 }
