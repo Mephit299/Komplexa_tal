@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Komplex {
     double realTal;
     double i;
@@ -5,6 +7,19 @@ public class Komplex {
     realTal = v;
     i = v1;
 
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Komplex komplex = (Komplex) o;
+        return Double.compare(komplex.realTal, realTal) == 0 && Double.compare(komplex.i, i) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(realTal, i);
     }
 
     @Override
@@ -24,7 +39,7 @@ public class Komplex {
     }
 
     public double arg() {
-
+    return (Math.atan(i/realTal));
     }
 }
 
